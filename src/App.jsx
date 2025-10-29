@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
+	return (
+		<>
+			<div>
+				<span>学習内容</span>
+				<input type="text" />
+			</div>
+			<div>
+				<span>学習時間</span>
+				<input type="number" />
+				時間
+			</div>
+			<div>
+				<p>入力されている学習内容: お金, 勉強, プログラミング</p>
+				<p>入力されている学習時間: 0時間</p>
+			</div>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <button>登録</button>
+        <p>エラーメッセージ: 学習内容と学習時間を入力してください。</p>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+			<div>
+				<p>学習記録一覧</p>
+				<ul>
+					<li>お金 - 2時間</li>
+					<li>勉強 - 1時間</li>
+					<li>プログラミング - 3時間</li>
+				</ul>
+			</div>
+			<div>
+				<p>合計学習時間: 0/1000 時間</p>
+			</div>
+		</>
+	);
 }
 
-export default App
+export default App;
